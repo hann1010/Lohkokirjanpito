@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Lohkontiedot</class>
+ <widget class="QDialog" name="Lohkontiedot">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>834</width>
+    <height>691</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Lohkontiedot-Lohkokirjanpito</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="horizontalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>650</y>
+     <width>391</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton_Uusi">
+      <property name="text">
+       <string>Tallenna uutena</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_paivita">
+      <property name="text">
+       <string>Päivitä</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_poista">
+      <property name="text">
+       <string>Poista</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Upd_List">
+      <property name="text">
+       <string>Päivitälista</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QGroupBox" name="groupBox">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>0</y>
+     <width>761</width>
+     <height>181</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Perustiedot</string>
+   </property>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>321</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0">
+        <widget class="QLabel" name="ssLabel">
+         <property name="text">
+          <string>Tilan nimi</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="ssLineEdit_Tila"/>
+       </item>
+       <item row="1" column="0">
+        <layout class="QFormLayout" name="formLayout_2"/>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="tilatunnusLabel">
+         <property name="text">
+          <string>Tilatunnus</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QLineEdit" name="tilatunnusLineEdit"/>
+       </item>
+       <item row="3" column="0">
+        <layout class="QFormLayout" name="formLayout_3"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="vuosiLabel">
+         <property name="text">
+          <string>Vuosi</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="vuosiLineEdit"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>60</y>
+      <width>391</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QFormLayout" name="formLayout_4">
+       <item row="0" column="0">
+        <widget class="QLabel" name="kasvulohkonNimiLabel">
+         <property name="text">
+          <string>Kasvulohkon nimi</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="kasvulohkonNimiLineEdit"/>
+       </item>
+       <item row="1" column="0">
+        <layout class="QFormLayout" name="formLayout_5"/>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="kasvulohkonTunnuusLabel">
+         <property name="text">
+          <string>Kasvulohkon tunnuus</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLineEdit" name="kasvulohkonTunnuusLineEdit"/>
+       </item>
+       <item row="4" column="0">
+        <layout class="QFormLayout" name="formLayout_6"/>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="pintaAlaLabel">
+         <property name="text">
+          <string>Pinta-ala</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLineEdit" name="pintaAlaLineEdit"/>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>321</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <layout class="QFormLayout" name="formLayout_17">
+       <item row="0" column="1">
+        <widget class="QLineEdit" name="rowIDLineEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 255, 255);</string>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="rowIDLabel">
+         <property name="text">
+          <string>rowID        </string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QGroupBox" name="groupBox_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>190</y>
+     <width>761</width>
+     <height>221</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Maantutkimus tiedot</string>
+   </property>
+   <widget class="QLabel" name="tutkimusvuosiLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>88</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tutkimusvuosi</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="tutkimusvuosiLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>30</y>
+      <width>211</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="multavuusLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>63</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Multavuus</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="multavuusLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>60</y>
+      <width>211</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="kalsiumCaLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>90</y>
+      <width>110</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kalsium (ca) -luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="kalsiumCaLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>90</y>
+      <width>211</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="kaliumKLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>120</y>
+      <width>98</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kalium (k) -Luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="kaliumKLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>120</y>
+      <width>211</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="booriBLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>150</y>
+      <width>91</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Boori (b) -Luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="booriBLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>150</y>
+      <width>211</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sinkkiZnLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>97</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sinkki (zn) -luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="sinkkiZnLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>180</y>
+      <width>211</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="maalajiLabel">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>30</y>
+      <width>43</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Maalaji</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="maalajiLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>30</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pHLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>60</y>
+      <width>51</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PH -luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="pHLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>60</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fosforiPLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>90</y>
+      <width>98</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fosfori (p) -luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="fosforiPLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>90</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mangnesiumMgLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>120</y>
+      <width>146</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mangnesium (mg) -luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="mangnesiumMgLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>120</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="kupariCuLukuLabel">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>150</y>
+      <width>102</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Kupari (cu) -luku</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="kupariCuLukuLineEdit">
+    <property name="geometry">
+     <rect>
+      <x>540</x>
+      <y>150</y>
+      <width>201</width>
+      <height>22</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QTableView" name="tableView">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>421</y>
+     <width>761</width>
+     <height>221</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>650</y>
+     <width>361</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <widget class="QComboBox" name="comboBox_filter">
+      <item>
+       <property name="text">
+        <string/>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Vuosi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lajike</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Laji</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lohkontunnus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Lohkon nimi</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Rivi nro</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="lineEdit_Filter"/>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_Filter">
+      <property name="text">
+       <string>Hae</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
